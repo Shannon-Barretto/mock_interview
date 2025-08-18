@@ -17,3 +17,35 @@ Conversions are treated as edges in a bidirectional graph, and queries traverse 
 │   ├── test_conversion_unittest.py                  
 │   ├── test_conversion_pytest.py
 ```
+
+## 🚀 How to Run
+
+### ✅ Using `unittest`
+```bash
+python3 -m unittest discover -s tests -q
+```
+
+### ✅ Using `pytest`
+```bash
+pip install pytest
+
+# verbose output
+python3 -m pytest -v
+
+# quite mode
+python3 -m pytest -q
+```
+
+## 🧪 Example Facts + Queries
+```bash
+Facts:
+    m = 3.28 ft
+    ft = 12 in
+    hr = 60 min
+    min = 60 sec
+
+Queries:
+    2 m = ? in   -> 78.72
+    13 in = ? m  -> 0.33
+    13 in = ? hr -> not convertible
+```
