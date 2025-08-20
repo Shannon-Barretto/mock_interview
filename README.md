@@ -12,10 +12,12 @@ Conversions are treated as edges in a bidirectional graph, and queries traverse 
 ├── src/
 │   ├── edge.py                   
 │   ├── node.py                    
-│   ├── main.py                               # Contains parse_facts() and answer_query()
+│   ├── main.py                                           # Contains parse_facts() and answer_query()
 ├── tests/
-│   ├── test_conversion_unittest.py                  
-│   ├── test_conversion_pytest.py
+│   ├── test_conversion_unittest.py                       # Traditional unnitest test
+│   ├── test_conversion_pytest.py                         # Equivalent pytest tests
+│   ├── test_conversion_hypothesis.py                     # Property based test with Hypothesis
+│   ├── test_conversion_random_hypothesis.py              # Random graph generation + connectivity tests
 ```
 
 ## 🚀 How to Run
