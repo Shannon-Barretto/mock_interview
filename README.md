@@ -63,3 +63,16 @@ Queries:
     13 in = ? m  -> 0.33
     13 in = ? hr -> not convertible
 ```
+
+## 🧪 Property-Based Tests with Hypothesis
+
+Instead of writing only fixed cases, we use [Hypothesis](https://hypothesis.readthedocs.io/en/latest/tutorial/introduction.html) to automatically generate thousands of random scenarios anc check that core principles always hold.
+
+Some properties tested:
+- **Round-trip conversions:** Converting `x` from unit A -> B -> A shuld give back approximately `x`.
+- **Connectivity:** If two units are connected in a graoh, then a conversion should exist.
+- **Symmetry:** If A converts to B and B converts to C, then A should ocnvert to C.
+- **Composition:** If A converts to B and B converts to C, tehn A should convert to C.
+- **Disconnected clusters:** Queries across disconnected subgraphs shuld return "not convertible"
+
+This ensure that the graph based conversion system behaves correctly not just for a few examples, but for a wide range of automatically generated cases.
