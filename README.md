@@ -38,6 +38,18 @@ python3 -m pytest -v
 python3 -m pytest -q
 ```
 
+### ✅ Using `hypothesis` (Property based testing)
+```bash
+pip install hypothesis
+
+# run only Hypothesis test
+python3 -m pytest -v tests/test_conversion_hypothesis.py
+python3 -m pytest -v tests/test_conversion_random_hypothesis.py
+
+# Or run everything (unit, pytest and hypothesis)
+python3 -m pytest -v
+```
+
 ## 🧪 Example Facts + Queries
 ```bash
 Facts:
