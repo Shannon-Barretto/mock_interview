@@ -24,7 +24,7 @@ Conversions are treated as edges in a bidirectional graph, and queries traverse 
 
 ### ✅ Using `unittest`
 ```bash
-python3 -m unittest discover -s tests -q
+python -m unittest discover -s tests -q
 ```
 
 ### ✅ Using `pytest`
@@ -32,10 +32,10 @@ python3 -m unittest discover -s tests -q
 pip install pytest
 
 # verbose output
-python3 -m pytest -v
+python -m pytest -v
 
 # quite mode
-python3 -m pytest -q
+python -m pytest -q
 ```
 
 ### ✅ Using `hypothesis` (Property based testing)
@@ -43,11 +43,11 @@ python3 -m pytest -q
 pip install hypothesis
 
 # run only Hypothesis test
-python3 -m pytest -v tests/test_conversion_hypothesis.py
-python3 -m pytest -v tests/test_conversion_random_hypothesis.py
+python -m pytest -v tests/test_conversion_hypothesis.py
+python -m pytest -v tests/test_conversion_random_hypothesis.py
 
 # Or run everything (unit, pytest and hypothesis)
-python3 -m pytest -v
+python -m pytest -v
 ```
 
 ## 🧪 Example Facts + Queries
